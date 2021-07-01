@@ -17,4 +17,4 @@ def screenshot():
     ss.do_screenshot()
     return open('static/screenshot.png', 'rb').read()
 
-app.run()
+app.run(host='0.0.0.0', port=6969)
