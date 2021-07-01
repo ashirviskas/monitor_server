@@ -1,4 +1,12 @@
 <!doctype html>
 <title>Hello from Flask</title>
 <!--<img src="screenshots/screenshot.png">-->
- <img src="{{url_for('static', filename='screenshot.png')}}" />
+<!-- <img src="{{url_for('static', filename='screenshot.png')}}" />-->
+ <img src="img.png" id="screenshot"/>
+<script>
+ setInterval(function() {
+    var myImageElement = document.getElementById('screenshot');
+    myImageElement.src = 'img.png?rand=' + Math.random();
+}, 1000);
+
+</script>
